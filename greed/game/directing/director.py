@@ -75,7 +75,6 @@ class Director:
             falling_object.set_velocity(velocity)
             falling_object.move_next(max_x, max_y)
 
-        
     def _do_outputs(self, collection):
         """Draws the actors on the screen.
         
