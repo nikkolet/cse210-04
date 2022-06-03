@@ -1,7 +1,8 @@
 from gc import collect
 import os
 import random
-
+import pygame
+from PIL import Image
 from game.casting.game_object import GameObject
 from game.casting.collection import Collection
 
@@ -56,7 +57,7 @@ def main():
     for obj in range(DEFAULT_FALLING_OBJECTS):
         n = obj % 2
         if(n == 0):
-            text = "*"
+            text = 'greed\images\gem.png'
         
         if(n != 0):
             text = "O"
