@@ -53,15 +53,17 @@ def main():
     player.set_position(position)
     collection.add_game_object("players", player)
 
-    for n in range(2):
+    for obj in range(DEFAULT_FALLING_OBJECTS):
+        n = obj % 2
         if(n == 0):
             text = "*"
         
-        if(n == 1):
+        if(n != 0):
             text = "O"
         print(f"this is {text}")
         x = random.randint(1, MAX_X)
-        y = FONT_SIZE
+        # y = FONT_SIZE
+        y = random.randint(1, MAX_Y)
         position = Point(x, y)
         #position = position.scale(CELL_SIZE)
 
